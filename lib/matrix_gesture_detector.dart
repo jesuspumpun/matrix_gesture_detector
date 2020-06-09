@@ -159,10 +159,10 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
     print(" - - - - - - - - - - - - - - - details scale : " + details.scale.toString());
     // handle matrix scaling
     if (widget.shouldScale && details.scale != 1.0 && details.scale * scale < 5) {
-      scale = details.scale * scale;
-      print(" - - - - - - - - - - - - - - - my scale : " + scale.toString());
       double scaleDelta = scaleUpdater.update(details.scale);
       print(" - - - - - - - - - - - - - - - delta scale : " + scaleDelta.toString());
+      scale = scaleDelta * scale;
+      print(" - - - - - - - - - - - - - - - my scale : " + scale.toString());
       scaleDeltaMatrix = _scale(scaleDelta, focalPoint);
       print(" - - - - - - - - - - - - - - - scaleDeltaMatrix scale : " + scaleDeltaMatrix.getMaxScaleOnAxis().toString());
       matrix = scaleDeltaMatrix * matrix;
