@@ -157,7 +157,7 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
     }
 
     // handle matrix scaling
-    if (widget.shouldScale && details.scale != 1.0 && details.scale * scale < 8 && details.scale * scale > 1) {
+    if (widget.shouldScale && details.scale != 1.0 && details.scale * scale < 8 && details.scale * scale > 1.5) {
       double scaleDelta = scaleUpdater.update(details.scale);
       scale = scaleDelta * scale;
       scaleDeltaMatrix = _scale(scaleDelta, focalPoint);
