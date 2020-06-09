@@ -155,7 +155,6 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
       focalPoint = renderBox.globalToLocal(details.focalPoint);
     }
 
-      print(" - - - - - - - - - - - - - - - " + details.scale.toString());
     // handle matrix scaling
     if (widget.shouldScale && details.scale != 1.0 && details.scale < 12.0 && details.scale > 0.4) {
       double scaleDelta = scaleUpdater.update(details.scale);
