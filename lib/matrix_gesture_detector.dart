@@ -107,7 +107,7 @@ class _MatrixGestureDetectorState extends State<MatrixGestureDetector> {
   Matrix4 scaleDeltaMatrix = Matrix4.identity();
   Matrix4 rotationDeltaMatrix = Matrix4.identity();
   Matrix4 matrix = Matrix4.identity();
-  double scale = 2;
+  double scale = 2.4;
 
   @override
   Widget build(BuildContext context) {
